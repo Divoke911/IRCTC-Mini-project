@@ -43,7 +43,7 @@ int main()
     {
         printf("1. Login\n2. Signup\n3. Exit\nEnter choice: ");
         scanf("%d", &ch);
-        getchar(); // Consume the newline character
+        getchar(); 
 
         switch (ch)
         {
@@ -58,7 +58,7 @@ int main()
                 printf("INVALID USERNAME/PASSWORD!!\n");
                 printf("1. Try Login Again\n2. Signup\n3. Exit\nEnter choice: ");
                 scanf("%d", &ch);
-                getchar(); // Consume the newline character
+                getchar(); 
 
                 if (ch == 2)
                 {
@@ -127,21 +127,19 @@ int signup(struct info *i)
     scanf("%14s", i->username);
     printf("Enter New Password: ");
     scanf("%19s", i->password);
-
-    // For simplicity, assuming signup is always successful
     return 1;
 }
 
 void booking(struct info *i)
 {
     printf("Enter name: ");
-    scanf("%19s", i->name); // Read up to 19 characters (leave space for null terminator)
+    scanf("%19s", i->name); 
 
     printf("Enter Age: ");
     scanf("%d", &i->age);
 
     printf("\n!!WRITE M for Male,F for Female !!\nEnter gender-> ");
-    scanf("%9s", i->gender); // Read up to 9 characters (leave space for null terminator)
+    scanf("%9s", i->gender); 
 
     printf("Enter Source: ");
     scanf("%9s", i->src);
